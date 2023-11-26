@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "base/reset";
+@import "utilities/variables";
+@import "utilities/layer-components";
+
+body {
+    background: var(--black);
+    color: var(--white);
+}
