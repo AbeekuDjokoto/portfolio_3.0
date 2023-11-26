@@ -3,11 +3,12 @@ import React from "react";
 import clapping from "@/app/assets/icons/clapping.svg";
 import Link from "next/link";
 import { FooterNavigation } from "@/app/libs/mocks";
+import { AnimatedSection } from "..";
 
 export default function Footer() {
   return (
     <footer className="flex flex-col gap-20">
-      <div>
+      <AnimatedSection>
         <div className="flex gap-2 items-center">
           <h1 className="text-white text-[44px] font-normal leading-[53.76px]">
             Let’s work together
@@ -17,7 +18,7 @@ export default function Footer() {
         <h1 className="text-[#737373] text-[44px] font-normal leading-[53.76px]">
           Get in touch.
         </h1>
-      </div>
+      </AnimatedSection>
       <div className="border-t-[1.2px] border-[#2E2E2E] pt-4 flex justify-between items-center">
         <h1 className="text-white text-[10.875px] font-normal leading-[16.8px]">
           Currently based in Ghana
@@ -25,7 +26,7 @@ export default function Footer() {
         <div className="flex gap-20">
           {FooterNavigation.map((link) => {
             return (
-              <div key={link.id}>
+              <AnimatedSection key={link.id}>
                 <h1 className="text-[#737373] text-[11.063px] font-normal leading-[16.8px]">
                   {link.title}
                 </h1>
@@ -41,7 +42,7 @@ export default function Footer() {
                     alt={link.hrefTitle}
                   />
                 </Link>
-              </div>
+              </AnimatedSection>
             );
           })}
         </div>
