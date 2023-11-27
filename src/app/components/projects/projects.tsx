@@ -19,7 +19,7 @@ export default function ProjectList() {
                   <h3 className="text-sm font-normal leading-5">
                     {project.title}
                   </h3>
-                  <p className="text-sm font-normal leading-5 text-[#737373]">
+                  <p className="text-sm font-normal leading-5 text-[#9E9C9C]">
                     {project.description}
                   </p>
                 </div>
@@ -46,7 +46,7 @@ export default function ProjectList() {
                   ))}
                 </div>
               </div>
-              <h3 className="text-sm font-normal leading-5 text-[#737373]">
+              <h3 className="text-sm font-normal leading-5 text-[#9E9C9C]">
                 {project.role}
               </h3>
             </div>

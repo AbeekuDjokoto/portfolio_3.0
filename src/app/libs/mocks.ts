@@ -218,3 +218,11 @@ export const Clients = {
     {id: 3, clientName: fredoEngineering},
   ]
 }
+
+export const ProjectGoals = [
+    {id: 1, goal: "Simplify trash pickup coordination."},
+    {id: 2, goal: "Provide transparent cost information."},
+    {id: 3, goal: "Ensure user-friendly mobile interface."},
+    {id: 4, goal: "Gather quick user input for improvement."},
+    {id: 5, goal: "Encourage eco-friendly waste disposal through the interface."},
+  ]

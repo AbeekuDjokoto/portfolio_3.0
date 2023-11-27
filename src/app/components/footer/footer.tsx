@@ -15,7 +15,7 @@ export default function Footer() {
           </h1>
           <Image src={clapping} width={44} height={45} alt="clapping icon" />
         </div>
-        <h1 className="text-[#737373] text-[44px] font-normal leading-[53.76px]">
+        <h1 className="text-[#9E9C9C] text-[44px] font-normal leading-[53.76px]">
           Get in touch.
         </h1>
       </AnimatedSection>
@@ -27,7 +27,7 @@ export default function Footer() {
           {FooterNavigation.map((link) => {
             return (
               <AnimatedSection key={link.id}>
-                <h1 className="text-[#737373] text-[11.063px] font-normal leading-[16.8px]">
+                <h1 className="text-[#9E9C9C] text-[11.063px] font-normal leading-[16.8px]">
                   {link.title}
                 </h1>
                 <Link

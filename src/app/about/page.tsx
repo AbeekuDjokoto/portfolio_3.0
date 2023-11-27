@@ -12,7 +12,7 @@ export default function About() {
             <h1 className="text-[40px] font-normal leading-[52px]">
               {ResumeHeader.title}
             </h1>
-            <div className=" text-[#737373] text-[14.25px] leading-7 flex justify-between">
+            <div className=" text-[#9E9C9C] text-base leading-6 flex justify-between">
               <p className="max-w-[570px] w-full">
                 {ResumeHeader.specialization1}
               </p>
@@ -36,13 +36,13 @@ export default function About() {
                   className="text-[14.25px] leading-[24.89px] flex flex-col gap-4"
                 >
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-[18.125px] leading-[26px]">
+                    <h3 className="text-[18.125px] leading-6">
                       {experience.jobTitle}
                     </h3>
                     <p className="text-[#292A2C]">{experience.industry}</p>
                   </div>
 
-                  <div className="text-[#737373] flex flex-col gap-2">
+                  <div className="text-[#9E9C9C] text-base leading-6 flex flex-col gap-2">
                     {experience.tasks.map((task) => {
                       return <p key={task.id}>{task.task}</p>;
                     })}
@@ -69,7 +69,9 @@ export default function About() {
                     <h3 className="text-[18.125px] leading-[26px]">
                       {skill.under}
                     </h3>
-                    <p className="text-[#737373]">{skill.description}</p>
+                    <p className="text-[#9E9C9C] text-base leading-6">
+                      {skill.description}
+                    </p>
                   </div>
                 </div>
               );
