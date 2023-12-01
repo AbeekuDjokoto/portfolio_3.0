@@ -15,6 +15,7 @@ export interface Project {
     href: string;
     image: any;
     title: string;
+    target: string | null;
     description: string;
     role: string;
     keywords: Keyword[];

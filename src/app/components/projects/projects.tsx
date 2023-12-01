@@ -10,7 +10,7 @@ export default function ProjectList() {
       {Projects.map((project) => (
         <AnimatedSection key={project.id}>
           <div className="flex flex-col gap-2">
-            <Link href={project.href}>
+            <Link href={project.href} target={project.target || undefined}>
               <Image src={project.image} alt={project.title} />
             </Link>
             <div className="flex justify-between">
@@ -19,7 +19,7 @@ export default function ProjectList() {
                   <h3 className="text-sm font-normal leading-5">
                     {project.title}
                   </h3>
-                  <p className="text-sm font-normal leading-5 text-[#9E9C9C]">
+                  <p className="text-[#9E9C9C] text-base leading-6 flex flex-col gap-2">
                     {project.description}
                   </p>
                 </div>

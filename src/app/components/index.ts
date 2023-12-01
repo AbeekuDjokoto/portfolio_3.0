@@ -1,6 +1,5 @@
 export * from './navigation'
 export * from './card'
-export * from './button'
 export * from './AnimateSection'
 export * from './projects'
 export * from './footer'

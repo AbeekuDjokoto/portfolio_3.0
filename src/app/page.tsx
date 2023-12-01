@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { AnimatedSection } from "./components";
 import profile from "@/app/assets/images/profile.svg";
-import zeroWaste from "@/app/assets/images/ZeroWaste.gif";
 import Card from "./components/card/card";
 import ProjectList from "./components/projects/projects";
 

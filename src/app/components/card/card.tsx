@@ -1,12 +1,15 @@
 import profile from "@/app/assets/images/profile.svg";
-import { Button } from "../button";
+
 import { cn } from "@/app/libs/classNames";
 import arrow from "@/app/assets/icons/arrow.svg";
+import download from "@/app/assets/icons/document-download.svg";
 import pointerArrow from "@/app/assets/icons/pointerArrow.svg";
 import { Links, SkillsAndTools } from "@/app/libs/mocks";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatedSection } from "..";
+
+import BaseButton from "@/app/action/button";
 
 export default function Card() {
   return (
@@ -25,27 +28,34 @@ export default function Card() {
                 Abeeku Djokoto
               </h1>
             </div>
-            <Button
+            <BaseButton
+              variant="primary"
               className={cn(
                 "flex justify-center gap-1 items-center text-base rounded-3xl py-3 max-w-[282px] w-full bg-[var(--black)] text-white font-normal"
               )}
             >
               <Image src={arrow} alt="arrow" width={24} height={24} />
               Get In Touch
-            </Button>
+            </BaseButton>
           </div>
           <div className="p-4 rounded-[10px] border border-[#E5E7EB] flex flex-col gap-4 text-[var(--black)] max-w-[387px] w-full">
-            <div className="flex justify-between items-center">
+            <Link
+              href="/cv.pdf"
+              download="cv"
+              className="flex justify-between items-center"
+              target="_blank"
+            >
               <h3 className="text-[var(--black-100)] text-base font-medium leading-6">
-                View my portfolio
+                Download my portfolio
               </h3>
               <Image
-                src={pointerArrow}
+                src={download}
                 alt="pointer arrow"
                 width={24}
                 height={24}
               />
-            </div>
+            </Link>
+
             <hr className="h-[1px] w-[353px] bg-[#E5E7EB]" />
             <div className="flex justify-between items-center">
               <h3 className="text-[var(--black-100)] text-base font-medium leading-6">
@@ -67,14 +77,15 @@ export default function Card() {
           <div className="flex flex-wrap gap-2">
             {SkillsAndTools.map((skills, index) => {
               return (
-                <div
+                <BaseButton
+                  variant="outline"
                   key={index}
-                  className="bg-white border border-[#E5E7EB] rounded-[20px] py-2 px-3"
+                  className="bg-white border border-[#E5E7EB] h-[48px] rounded-[20px] py-2 px-3"
                 >
                   <p className="text-[var(--black)] text-sm font-normal leading-[18.66px] tracking-[0.15px] capitalize">
                     {skills.title}
                   </p>
-                </div>
+                </BaseButton>
               );
             })}
           </div>
