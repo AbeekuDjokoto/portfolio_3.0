@@ -3,6 +3,7 @@ import profile from "../app/assets/images/abeekudjokoto.png";
 import Card from "./components/card/card";
 import ProjectList from "./components/projects/projects";
 import whitedownload from "@/app/assets/icons/whiteDownload.svg";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,15 +28,20 @@ export default function Home() {
               Abeeku Djokoto
             </p>
             <div className="md:hidden flex gap-2 items-center">
-              <p className="text-white text-sm font-medium leading-[19.88px]">
-                Download Portfolio
-              </p>
-              <Image
-                src={whitedownload}
-                alt="pointer arrow"
-                width={24}
-                height={24}
-              />
+              <Link
+                href="/cv.pdf"
+                download="cv"
+                className="flex justify-between items-center text-white text-sm font-medium leading-[19.88px]"
+                target="_blank"
+              >
+                Download my portfolio
+                <Image
+                  src={whitedownload}
+                  alt="pointer arrow"
+                  width={24}
+                  height={24}
+                />
+              </Link>
             </div>
           </div>
         </div>
