@@ -14,7 +14,7 @@ import BaseButton from "@/app/action/button";
 export default function Card() {
   return (
     <AnimatedSection>
-      <div className="bg-white py-8 px-5 max-w-[437px] w-full flex flex-col gap-[80px] border border-[#E5E7EB]">
+      <div className="bg-white py-8 px-6 max-w-[437px] w-full flex flex-col gap-[80px] border border-[#E5E7EB]">
         <div className="flex flex-col gap-6 justify-center">
           <div className="flex flex-col gap-4 items-center">
             <div className="flex flex-col gap-1 items-center">
@@ -28,15 +28,19 @@ export default function Card() {
                 Abeeku Djokoto
               </h1>
             </div>
-            <BaseButton
-              variant="primary"
-              className={cn(
-                "flex justify-center gap-1 items-center text-base rounded-3xl py-3 max-w-[282px] w-full bg-[var(--black)] text-white font-normal"
-              )}
+            <Link
+              className="max-w-[282px] w-full"
+              href="mailto:djokotoabeeku619@gmail.com?subject=Interested%20in%20Working%20Together&body=Hello%20there,%0A%0AI%20am%20interested%20in%20working%20with%20you.%20Let's%20discuss%20the%20details.%0A%0ABest%20regards"
             >
-              <Image src={arrow} alt="arrow" width={24} height={24} />
-              Get In Touch
-            </BaseButton>
+              <BaseButton
+                className={cn(
+                  "max-w-[282px] w-full flex gap-2 bg-[var(--black)] text-white font-normal"
+                )}
+              >
+                <Image src={arrow} alt="arrow" width={24} height={24} />
+                Get In Touch
+              </BaseButton>
+            </Link>
           </div>
           <div className="p-4 rounded-[10px] border border-[#E5E7EB] flex flex-col gap-4 text-[var(--black)] max-w-[387px] w-full">
             <Link
@@ -55,19 +59,6 @@ export default function Card() {
                 height={24}
               />
             </Link>
-
-            <hr className="h-[1px] w-[353px] bg-[#E5E7EB]" />
-            <div className="flex justify-between items-center">
-              <h3 className="text-[var(--black-100)] text-base font-medium leading-6">
-                Recommended
-              </h3>
-              <Image
-                src={pointerArrow}
-                alt="pointer arrow"
-                width={24}
-                height={24}
-              />
-            </div>
           </div>
         </div>
         <div className="flex flex-col gap-6">

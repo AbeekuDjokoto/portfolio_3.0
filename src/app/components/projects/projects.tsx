@@ -16,9 +16,11 @@ export default function ProjectList() {
             <div className="flex justify-between">
               <div className="max-w-[500px] w-full flex flex-col gap-4">
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-sm font-normal leading-5">
-                    {project.title}
-                  </h3>
+                  <div className="flex justify-between text-sm font-normal leading-5">
+                    <h3>{project.title}</h3>
+                    <h3 className="text-[#9E9C9C]">{project.role}</h3>
+                  </div>
+
                   <p className="text-[#9E9C9C] text-base leading-6 flex flex-col gap-2">
                     {project.description}
                   </p>
@@ -46,9 +48,6 @@ export default function ProjectList() {
                   ))}
                 </div>
               </div>
-              <h3 className="text-sm font-normal leading-5 text-[#9E9C9C]">
-                {project.role}
-              </h3>
             </div>
           </div>
         </AnimatedSection>

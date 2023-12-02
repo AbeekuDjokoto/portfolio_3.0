@@ -15,7 +15,7 @@ export default function BaseButton({
   ...rest
 }: {
   readonly children: React.ReactNode;
-  readonly variant: string;
+  readonly variant?: string;
   readonly styles?: object;
   readonly size?: string;
   readonly className?: string;

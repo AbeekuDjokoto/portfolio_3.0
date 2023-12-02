@@ -10,12 +10,12 @@ export default function Footer() {
     <footer className="flex flex-col gap-20">
       <AnimatedSection>
         <div className="flex gap-2 items-center">
-          <h1 className="text-white text-[44px] font-normal leading-[53.76px]">
+          <h1 className="text-white text-3xl md:text-[44px] font-normal leading-[140%] md:leading-[53.76px]">
             Let’s work together
           </h1>
           <Image src={clapping} width={44} height={45} alt="clapping icon" />
         </div>
-        <h1 className="text-[#9E9C9C] text-[44px] font-normal leading-[53.76px]">
+        <h1 className="text-[#9E9C9C] text-2xl md:text-[44px] font-normal leading-[110%] md:leading-[53.76px]">
           Get in touch.
         </h1>
       </AnimatedSection>

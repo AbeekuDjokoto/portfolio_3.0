@@ -39,10 +39,8 @@
       background: #0B6B5A;
       position: absolute;
       left: -40px; 
-      
       top: -39px;
       z-index: -1; 
-      
       transition: all 0.3s ease, height 0.3s ease; 
     }
   
@@ -75,7 +73,6 @@
   
     &:not(:disabled):hover {
         border: 3px solid var(--black);
-        margin: -2px;
     }
   
     &:before {

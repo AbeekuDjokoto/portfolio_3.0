@@ -1,6 +1,4 @@
 import React from "react";
-import zeroWaste from "@/app/assets/images/zeroWaste.gif";
-
 import Image from "next/image";
 import { AboutPageDetails } from "@/app/libs/mocks";
 import { AnimatedSection } from "@/app/components";
@@ -16,10 +14,10 @@ export default function page({ params }: { params: { productId: string } }) {
   }
 
   return (
-    <main className="flex flex-col gap-[80px]">
+    <main className="flex flex-col gap-[40px] md:gap-[80px]">
       <AnimatedSection>
-        <header className="flex justify-between h-[312px] items-center">
-          <div className="max-w-[505px] w-full flex flex-col gap-10">
+        <header className="flex flex-col md:flex-row justify-between h-[312px] items-center">
+          <div className="md:max-w-[505px] w-full flex flex-col gap-10">
             <div className="flex flex-col gap-2 text-xs leading-6 tracking-[2px]">
               <h4 className="uppercase">{product.client?.title}</h4>
               <p className="text-base leading-[18px]">
@@ -48,9 +46,9 @@ export default function page({ params }: { params: { productId: string } }) {
 
       <Image src={product.topImage} width={1170} height={658} alt="work done" />
 
-      <div className="flex justify-between items-center py-[52px]">
-        <div className="max-w-[505px] w-full"></div>
-        <div className="max-w-[755px] w-full flex flex-col gap-2">
+      <div className="flex justify-between items-center md:py-[52px]">
+        <div className="hidden md:max-w-[505px] w-full md:flex"></div>
+        <div className="md:max-w-[755px] w-full flex flex-col gap-2">
           <AnimatedSection>
             <div className="text-[14.25px] leading-[24.89px] flex flex-col gap-3 uppercase">
               <h1>{product.problemStatement?.title}</h1>
@@ -64,8 +62,9 @@ export default function page({ params }: { params: { productId: string } }) {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-[120px]">
-        <div className="flex gap-[90px]">
+
+      <div className="flex flex-col gap-10 md:gap-[120px]">
+        <div className="flex justify-between md:gap-[90px]">
           {product.topScreens?.map((item) => {
             return (
               <AnimatedSection key={item.id}>
@@ -74,7 +73,7 @@ export default function page({ params }: { params: { productId: string } }) {
             );
           })}
         </div>
-        <div className="flex justify-end gap-[90px]">
+        <div className="flex justify-between md:justify-end md:gap-[90px]">
           {product.bottomScreens?.map((item) => {
             return (
               <AnimatedSection key={item.id}>
@@ -84,8 +83,10 @@ export default function page({ params }: { params: { productId: string } }) {
           })}
         </div>
       </div>
-      <div className="flex justify-between">
-        <div className="max-w-[505px] w-full flex flex-col gap-10">
+
+      {/* goals */}
+      <div className="flex flex-col gap-4 pb-[20px] md:pt-0 md:flex-row justify-between">
+        <div className="md:max-w-[505px] w-full flex flex-col gap-10">
           <AnimatedSection>
             <h4 className="text-[14.25px] leading-[24.89px] flex flex-col gap-3 uppercase">
               {product.projectGoals?.title}
@@ -94,11 +95,11 @@ export default function page({ params }: { params: { productId: string } }) {
         </div>
 
         {/* Project goals */}
-        <section className="max-w-[755px] w-full grid grid-cols-2 justify-between gap-7 items-center">
+        <section className="md:max-w-[755px] w-full grid md:grid-cols-2 justify-between gap-7 items-center">
           {product.projectGoals?.goals.map((goals) => {
             return (
               <AnimatedSection key={goals.id}>
-                <div className="max-w-[270px] h-[190px] w-full flex flex-col gap-5">
+                <div className="md:max-w-[270px] md:h-[190px] w-full flex flex-col gap-5">
                   <div className="rounded-full border-[#fff] border w-[36px] h-[36px] flex items-center justify-center">
                     {goals.id}
                   </div>
@@ -111,7 +112,7 @@ export default function page({ params }: { params: { productId: string } }) {
       </div>
 
       {/* UI Elements */}
-      <section className="flex justify-between gap-7">
+      <section className="flex flex-wrap mx-auto md:mx-0 justify-center items-center md:flex-row md:justify-between gap-7">
         {product?.uielements?.map((element) => {
           return (
             <AnimatedSection key={element.id}>
@@ -129,19 +130,19 @@ export default function page({ params }: { params: { productId: string } }) {
       </section>
 
       {/* Research Methods */}
-      <section className="flex justify-between">
-        <div className="max-w-[505px] w-full flex flex-col gap-10">
+      <section className="flex flex-col gap-4 md:flex-row justify-between">
+        <div className="md:max-w-[505px] w-full flex flex-col gap-10">
           <AnimatedSection>
             <h4 className="text-[14.25px] leading-[24.89px] flex flex-col gap-3 uppercase">
               {product.researchMethods?.title}
             </h4>
           </AnimatedSection>
         </div>
-        <div className="max-w-[755px] w-full grid grid-cols-2 justify-between gap-7 items-center">
+        <div className="md:max-w-[755px] w-full grid grid-cols-2 justify-between gap-7 items-center">
           {product.researchMethods?.methods.map((method) => {
             return (
               <AnimatedSection key={method.id}>
-                <div className="max-w-[270px]  w-full flex flex-col gap-5">
+                <div className="md:max-w-[270px] w-full flex flex-col gap-5">
                   <Image
                     src={method.image}
                     width={42}
@@ -158,8 +159,8 @@ export default function page({ params }: { params: { productId: string } }) {
 
       {/* Right with no left */}
       <div className="flex justify-between items-center py-[52px]">
-        <div className="max-w-[505px] w-full"></div>
-        <div className="max-w-[755px] w-full flex flex-col gap-4">
+        <div className="hidden md:max-w-[505px] w-full md:flex"></div>
+        <div className="md:max-w-[755px] w-full flex flex-col gap-4">
           <AnimatedSection>
             <p className="text-[#9E9C9C] text-base leading-6 flex flex-col gap-2">
               {product.researchFinding}
@@ -170,7 +171,7 @@ export default function page({ params }: { params: { productId: string } }) {
 
       {/* Key focus areas */}
       <section className="flex justify-between items-center py-[50px]">
-        <div className="max-w-[505px] w-full flex flex-col gap-10">
+        <div className="md:max-w-[755px] w-full flex flex-col gap-10">
           <div className="flex flex-col gap-4">
             <AnimatedSection>
               <h4 className="text-[14.25px] leading-[24.89px] flex flex-col gap-3 uppercase">
@@ -184,11 +185,11 @@ export default function page({ params }: { params: { productId: string } }) {
             </div>
           </div>
         </div>
-        <div className="max-w-[755px] w-full"></div>
+        <div className="hidden md:max-w-[505px] w-full md:flex"></div>
       </section>
 
       {/* Customer needs */}
-      <section className="flex justify-between">
+      <section className="flex flex-col gap-4 md:flex-row justify-between">
         <div className="max-w-[505px] w-full flex flex-col gap-10">
           <AnimatedSection>
             <h4 className="text-[14.25px] leading-[24.89px] flex flex-col gap-3 uppercase">
@@ -196,11 +197,11 @@ export default function page({ params }: { params: { productId: string } }) {
             </h4>
           </AnimatedSection>
         </div>
-        <div className="max-w-[755px] w-full grid grid-cols-2 justify-between gap-2 items-center">
+        <div className="md:max-w-[755px] w-full grid md:grid-cols-2 justify-between gap-5 md:gap-2 items-center">
           {product.customerNeeds?.needs.map((text) => {
             return (
               <AnimatedSection key={text.id}>
-                <div className="max-w-[270px] w-full flex flex-col gap-2 h-[192px]">
+                <div className="md:max-w-[270px] w-full flex flex-col gap-2 md:h-[192px]">
                   <h1 className="text-[14.25px] leading-[24.89px] flex flex-col gap-3 uppercase">
                     {text.title}
                   </h1>
