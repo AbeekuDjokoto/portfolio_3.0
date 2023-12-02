@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./sass/main.scss";
 import NavigationBar from "./components/navigation/navigation";
 import Footer from "./components/footer/footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,19 @@ export default function RootLayout({
         <link rel="icon" href="/logo.svg" type="image/x-icon" />
       </head>
       <body className={inter.className}>
+        <Script
+          id="G-YPHDDNJNVX"
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-YPHDDNJNVX"
+        ></Script>
+        <Script id="google-analytics">
+          {`
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-YPHDDNJNVX');
+      `}
+        </Script>
         <div className="flex flex-col gap-20 wrapper py-6">
           <NavigationBar />
           {children}
