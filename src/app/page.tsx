@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profile from "@/app/assets/images/abeekudjokoto.jpg";
+import profile from "../app/assets/images/abeekudjokoto.png";
 import Card from "./components/card/card";
 import ProjectList from "./components/projects/projects";
 import whitedownload from "@/app/assets/icons/whiteDownload.svg";

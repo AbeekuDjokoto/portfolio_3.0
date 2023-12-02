@@ -1,4 +1,4 @@
-import profile from "@/app/assets/images/abeekudjokoto.jpg";
+import profile from "@/app/assets/images/abeekudjokoto.png";
 import { cn } from "@/app/libs/classNames";
 import arrow from "@/app/assets/icons/arrow.svg";
 import download from "@/app/assets/icons/document-download.svg";
