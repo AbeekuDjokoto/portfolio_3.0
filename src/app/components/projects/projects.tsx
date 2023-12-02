@@ -14,14 +14,14 @@ export default function ProjectList() {
               <Image src={project.image} alt={project.title} />
             </Link>
             <div className="flex justify-between">
-              <div className="max-w-[500px] w-full flex flex-col gap-4">
+              <div className="w-full flex flex-col gap-4">
                 <div className="flex flex-col gap-2">
                   <div className="flex justify-between text-sm font-normal leading-5">
                     <h3>{project.title}</h3>
                     <h3 className="text-[#9E9C9C]">{project.role}</h3>
                   </div>
 
-                  <p className="text-[#9E9C9C] text-base leading-6 flex flex-col gap-2">
+                  <p className="text-[#9E9C9C] text-base leading-6 flex flex-col gap-2 md:max-w-[500px]">
                     {project.description}
                   </p>
                 </div>

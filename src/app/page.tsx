@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profile from "@/app/assets/images/profile.svg";
+import profile from "@/app/assets/images/abeekudjokoto.jpg";
 import Card from "./components/card/card";
 import ProjectList from "./components/projects/projects";
 import whitedownload from "@/app/assets/icons/whiteDownload.svg";
@@ -15,7 +15,13 @@ export default function Home() {
           Software Engineer + Product Designer
         </h1>
         <div className="flex items-center gap-2">
-          <Image src={profile} alt="profile image" width={64} height={64} />
+          <Image
+            src={profile}
+            alt="profile image"
+            width={64}
+            height={64}
+            className="rounded-full"
+          />
           <div className="flex flex-col gap-1">
             <p className="text-white text-sm font-medium leading-[19.88px]">
               Abeeku Djokoto

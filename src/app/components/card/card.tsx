@@ -1,9 +1,7 @@
-import profile from "@/app/assets/images/profile.svg";
-
+import profile from "@/app/assets/images/abeekudjokoto.jpg";
 import { cn } from "@/app/libs/classNames";
 import arrow from "@/app/assets/icons/arrow.svg";
 import download from "@/app/assets/icons/document-download.svg";
-import pointerArrow from "@/app/assets/icons/pointerArrow.svg";
 import { Links, SkillsAndTools } from "@/app/libs/mocks";
 import Image from "next/image";
 import Link from "next/link";
