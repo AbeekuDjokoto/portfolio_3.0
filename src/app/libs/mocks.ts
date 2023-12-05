@@ -107,7 +107,7 @@ export const Projects: Project[] = [
           { title: "next", icon: next },
           { title: "tailwind", icon: tailwind },
           { title: "typescript", icon: typescript },
-          { title: "graphql", icon: graphql },
+          { title: "tanstack", icon: tanstack },
           { title: "jest", icon: jest },
           { title: "sass", icon: sass },
           { title: "git", icon: git }

@@ -58,7 +58,7 @@ export default function About() {
           <p className="md:max-w-[570px] w-full text-[14.5px] leading-[23.36px]">
             {Skills.category}
           </p>
-          <div className="md:first:last:max-w-[570px] w-full flex flex-col gap-10">
+          <div className="md:max-w-[570px] w-full flex flex-col gap-10">
             {Skills.skills.map((skill) => {
               return (
                 <div
