@@ -7,22 +7,22 @@ import GoogleAnalytics from "./components/googleAnalytics/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: `Abeeku's Porfolio`,
-  description: "Product designer + software engineer portfolio",
-  metadataBase: new URL("https://abeeku-portfolio.vercel.app/"),
-  openGraph: {
-    images: [
-      "https://asset.cloudinary.com/dgos0voss/bc76d3cd22650bcf2b9725a408536b9c",
-    ],
-    type: "website",
-    url: "https://abeeku-portfolio.vercel.app/",
-    siteName: "Abeeku's Portfolio",
-    locale: "en_US",
-    title: "Abeeku's Portfolio",
-    description: "Product designer + software engineer portfolio",
-  },
-};
+// export const metadata: Metadata = {
+//   title: `Abeeku's Porfolio`,
+//   description: "Product designer + software engineer portfolio",
+//   metadataBase: new URL("https://abeeku-portfolio.vercel.app/"),
+//   keywords: ["product designer, software engineer, portfolio"],
+//   openGraph: {
+//     images:
+//       "https://asset.cloudinary.com/dgos0voss/bc76d3cd22650bcf2b9725a408536b9c",
+//     type: "website",
+//     url: "https://abeeku-portfolio.vercel.app/",
+//     siteName: "Abeeku's Portfolio",
+//     locale: "en_US",
+//     title: "Abeeku's Portfolio",
+//     description: "Product designer + software engineer portfolio",
+//   },
+// };
 
 export default function RootLayout({
   children,
@@ -36,6 +36,50 @@ export default function RootLayout({
           rel="icon"
           href="https://media.licdn.com/dms/image/v2/C4D03AQH6pXbeA9Nhzg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1641681934540?e=1733356800&v=beta&t=wBzCWVdI4ELxY2Pg_zwiL6KyPcPjEUSX4jpwDCYz-Bk"
           type="image/x-icon"
+        />
+
+        <meta
+          name="description"
+          content="Mypurplepay is a forward thinking digital cooperative savings and credit platform that is poised to revolutionize the financial landscape. We provide accessible and flexible financing solutions to individuals and businesses filling in the gap left by traditional lending institutions. Our service aims to facilitate and promote financial wellness among individuals communities by offering a convenient platform for collective savings and alternative lending."
+        />
+
+        <meta
+          property="og:url"
+          content="https://abeeku-portfolio.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="MyPurplePay" />
+        <meta
+          property="og:description"
+          content="Mypurplepay is a forward thinking digital cooperative savings and credit platform that is poised to revolutionize the financial landscape. We provide accessible and flexible financing solutions to individuals and businesses filling in the gap left by traditional lending institutions. Our service aims to facilitate and promote financial wellness among individuals communities by offering a convenient platform for collective savings and alternative lending."
+        />
+        <meta
+          property="og:image"
+          content="https://asset.cloudinary.com/dgos0voss/bc76d3cd22650bcf2b9725a408536b9c"
+        />
+        <meta
+          name="keywords"
+          content="Thrift Savings, Target Savings, Micro-credit, Loan, Short-term loans, Salary loans, Savings loans, Finance, Responsible Borrowing, Financial Security"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="abeeku-portfolio.vercel.app" />
+        <meta
+          property="twitter:url"
+          content="https://abeeku-portfolio.vercel.app"
+        />
+        <meta name="twitter:title" content="MyPurplePay" />
+        <meta
+          name="twitter:description"
+          content="Mypurplepay is a forward thinking digital cooperative savings and credit platform that is poised to revolutionize the financial landscape. We provide accessible and flexible financing solutions to individuals and businesses filling in the gap left by traditional lending institutions. Our service aims to facilitate and promote financial wellness among individuals communities by offering a convenient platform for collective savings and alternative lending."
+        />
+        <meta
+          name="twitter:image"
+          content="https://asset.cloudinary.com/dgos0voss/bc76d3cd22650bcf2b9725a408536b9c"
+        />
+        <meta
+          name="twitter:keywords"
+          content="Thrift Savings, Target Savings, Micro-credit, Loan, Short-term loans, Salary loans, Savings loans, Finance, Responsible Borrowing, Financial Security"
         />
       </head>
       <body className={inter.className}>
