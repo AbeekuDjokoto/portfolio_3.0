@@ -65,6 +65,7 @@ export default function RootLayout({
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@lar_riri" />
         <meta property="twitter:domain" content="abeeku-portfolio.vercel.app" />
         <meta
           property="twitter:url"
@@ -75,7 +76,10 @@ export default function RootLayout({
           name="twitter:description"
           content="Product designer + software engineer portfolio"
         />
-        <meta name="twitter:image" content="/metaImage.png" />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dgos0voss/image/upload/v1727957751/metaImage_nmanzt.png"
+        />
         <meta
           name="twitter:keywords"
           content="product designer, software engineer, portfolio"
