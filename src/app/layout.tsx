@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Product designer + software engineer portfolio",
   metadataBase: new URL("https://abeeku-portfolio.vercel.app/"),
   openGraph: {
-    images: ["./assets/images/metaImage.png"],
+    images: ["/metaImage.png"],
     type: "website",
     url: "https://abeeku-portfolio.vercel.app/",
     siteName: "Abeeku's Portfolio",
@@ -30,7 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="html">
       <head>
-        <link rel="icon" href="/logo.svg" type="image/x-icon" />
+        <link
+          rel="icon"
+          href="https://media.licdn.com/dms/image/v2/C4D03AQH6pXbeA9Nhzg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1641681934540?e=1733356800&v=beta&t=wBzCWVdI4ELxY2Pg_zwiL6KyPcPjEUSX4jpwDCYz-Bk"
+          type="image/x-icon"
+        />
       </head>
       <body className={inter.className}>
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
