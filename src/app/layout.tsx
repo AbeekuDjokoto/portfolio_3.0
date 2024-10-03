@@ -34,22 +34,25 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="https://media.licdn.com/dms/image/v2/C4D03AQH6pXbeA9Nhzg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1641681934540?e=1733356800&v=beta&t=wBzCWVdI4ELxY2Pg_zwiL6KyPcPjEUSX4jpwDCYz-Bk"
+          href="https://abeeku-portfolio.vercel.app/"
           type="image/x-icon"
         />
 
         <meta
           name="description"
-          content="Mypurplepay is a forward thinking digital cooperative savings and credit platform that is poised to revolutionize the financial landscape. We provide accessible and flexible financing solutions to individuals and businesses filling in the gap left by traditional lending institutions. Our service aims to facilitate and promote financial wellness among individuals communities by offering a convenient platform for collective savings and alternative lending."
+          content="Product designer + software engineer portfolio"
         />
 
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://purple-vest.enyata.com/" />
+        <meta
+          property="og:url"
+          content="https://abeeku-portfolio.vercel.app/"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="MyPurplePay" />
+        <meta property="og:title" content="View Abeeku's Portfolio" />
         <meta
           property="og:description"
-          content="Mypurplepay is a forward thinking digital cooperative savings and credit platform that is poised to revolutionize the financial landscape. We provide accessible and flexible financing solutions to individuals and businesses filling in the gap left by traditional lending institutions. Our service aims to facilitate and promote financial wellness among individuals communities by offering a convenient platform for collective savings and alternative lending."
+          content="Product designer + software engineer portfolio"
         />
         <meta
           property="og:image"
@@ -57,25 +60,25 @@ export default function RootLayout({
         />
         <meta
           name="keywords"
-          content="Thrift Savings, Target Savings, Micro-credit, Loan, Short-term loans, Salary loans, Savings loans, Finance, Responsible Borrowing, Financial Security"
+          content="product designer, software engineer, portfolio"
         />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="purple-vest.enyata.com" />
+        <meta property="twitter:domain" content="abeeku-portfolio.vercel.app" />
         <meta
           property="twitter:url"
-          content="https://purple-vest.enyata.com/"
+          content="https://abeeku-portfolio.vercel.app/"
         />
-        <meta name="twitter:title" content="MyPurplePay" />
+        <meta name="twitter:title" content="View Abeeku's Portfolio" />
         <meta
           name="twitter:description"
-          content="Mypurplepay is a forward thinking digital cooperative savings and credit platform that is poised to revolutionize the financial landscape. We provide accessible and flexible financing solutions to individuals and businesses filling in the gap left by traditional lending institutions. Our service aims to facilitate and promote financial wellness among individuals communities by offering a convenient platform for collective savings and alternative lending."
+          content="Product designer + software engineer portfolio"
         />
         <meta name="twitter:image" content="/metaImage.png" />
         <meta
           name="twitter:keywords"
-          content="Thrift Savings, Target Savings, Micro-credit, Loan, Short-term loans, Salary loans, Savings loans, Finance, Responsible Borrowing, Financial Security"
+          content="product designer, software engineer, portfolio"
         />
 
         {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
