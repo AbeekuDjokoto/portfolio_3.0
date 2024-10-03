@@ -9,8 +9,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: `Abeeku's Porfolio`,
-  description:
-    "A page showing a product designer + software engineer portfolio",
+  description: "Product designer + software engineer portfolio",
+  metadataBase: new URL("https://abeeku-portfolio.vercel.app/"),
+  openGraph: {
+    images: ["./assets/images/metaImage.png"],
+    type: "website",
+    url: "https://abeeku-portfolio.vercel.app/",
+    siteName: "Abeeku's Portfolio",
+    locale: "en_US",
+    title: "Abeeku's Portfolio",
+    description: "Product designer + software engineer portfolio",
+  },
 };
 
 export default function RootLayout({

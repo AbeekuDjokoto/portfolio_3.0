@@ -39,7 +39,7 @@ export default function About() {
                     <h3 className="text-[18.125px] leading-6">
                       {experience.jobTitle}
                     </h3>
-                    <p className="text-[#292A2C]">{experience.industry}</p>
+                    <p className="text-[#f4f4f4]">{experience.industry}</p>
                   </div>
 
                   <div className="text-[#9E9C9C] text-base leading-6 flex flex-col gap-2">
