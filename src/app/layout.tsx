@@ -12,7 +12,9 @@ export const metadata: Metadata = {
   description: "Product designer + software engineer portfolio",
   metadataBase: new URL("https://abeeku-portfolio.vercel.app/"),
   openGraph: {
-    images: ["/metaImage.png"],
+    images: [
+      "https://asset.cloudinary.com/dgos0voss/bc76d3cd22650bcf2b9725a408536b9c",
+    ],
     type: "website",
     url: "https://abeeku-portfolio.vercel.app/",
     siteName: "Abeeku's Portfolio",
