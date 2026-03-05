@@ -12,7 +12,7 @@ import BaseButton from "@/app/action/button";
 export default function Card() {
   return (
     <AnimatedSection>
-      <div className="bg-white py-8 px-6 max-w-[437px] w-full flex flex-col gap-[80px] border border-[#E5E7EB]">
+      <div className="bg-white py-8 px-6 max-w-[437px] w-full flex flex-col gap-[60px] border border-[#E5E7EB] rounded-[28px] shadow-[0_18px_60px_rgba(0,0,0,0.25)] sticky top-24">
         <div className="flex flex-col gap-6 justify-center">
           <div className="flex flex-col gap-4 items-center">
             <div className="flex flex-col gap-1 items-center">
@@ -21,6 +21,7 @@ export default function Card() {
                 alt="profile image"
                 width={176}
                 height={176}
+                className="rounded-full"
               />
               <h1 className="text-[var(--black-100)] text-[34px] font-bold leading-10 tracking-tighter">
                 Abeeku Djokoto
@@ -44,7 +45,7 @@ export default function Card() {
             <Link
               href="/cv.pdf"
               download="cv"
-              className="flex justify-between items-center"
+              className="flex justify-between items-center hover:opacity-75 transition-opacity"
               target="_blank"
             >
               <h3 className="text-[var(--black-100)] text-base font-medium leading-6">
@@ -86,7 +87,7 @@ export default function Card() {
           <div className="flex flex-wrap gap-4">
             {Links.map((link, index) => {
               return (
-                <Link href={link.href} key={index}>
+                <Link href={link.href} key={index} className="hover:opacity-70 transition-opacity">
                   <Image
                     src={link.icon}
                     width={24}
