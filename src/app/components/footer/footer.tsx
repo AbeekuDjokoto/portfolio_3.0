@@ -7,23 +7,25 @@ import { AnimatedSection } from "..";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col gap-20">
+    <footer className="flex flex-col gap-12 md:gap-16">
       <AnimatedSection>
-        <div className="flex gap-2 items-center">
-          <h1 className="text-white text-3xl md:text-[44px] font-normal leading-[140%] md:leading-[53.76px]">
-            Let’s work together
+        <div className="rounded-2xl border border-[#242a33] bg-[#0f141c] p-5 md:p-8">
+          <div className="flex gap-2 items-center">
+            <h1 className="text-white text-3xl md:text-[44px] font-normal leading-[140%] md:leading-[53.76px]">
+              Let’s work together
+            </h1>
+            <Image src={clapping} width={44} height={45} alt="clapping icon" />
+          </div>
+          <h1 className="text-[#9E9C9C] text-2xl md:text-[44px] font-normal leading-[110%] md:leading-[53.76px]">
+            Get in touch.
           </h1>
-          <Image src={clapping} width={44} height={45} alt="clapping icon" />
         </div>
-        <h1 className="text-[#9E9C9C] text-2xl md:text-[44px] font-normal leading-[110%] md:leading-[53.76px]">
-          Get in touch.
-        </h1>
       </AnimatedSection>
-      <div className="border-t-[1.2px] border-[#2E2E2E] pt-4 flex justify-between items-center">
+      <div className="border-t-[1.2px] border-[#2E2E2E] pt-4 flex flex-col md:flex-row gap-6 md:gap-0 justify-between md:items-center">
         <h1 className="text-white text-[10.875px] font-normal leading-[16.8px]">
           Currently based in Ghana
         </h1>
-        <div className="flex gap-20">
+        <div className="flex gap-10 md:gap-20">
           {FooterNavigation.map((link) => {
             return (
               <AnimatedSection key={link.id}>
@@ -32,7 +34,7 @@ export default function Footer() {
                 </h1>
                 <Link
                   href={link.href}
-                  className="text-white text-[10.875px] font-normal leading-[16.8px] flex gap-[2px]"
+                  className="text-white text-[10.875px] font-normal leading-[16.8px] flex gap-[2px] hover:opacity-75 transition-opacity"
                 >
                   <p>{link.hrefTitle}</p>
                   <Image
