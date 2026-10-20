@@ -3,6 +3,7 @@ import React from "react";
 import clapping from "@/app/assets/icons/clapping.svg";
 import Link from "next/link";
 import { FooterNavigation } from "@/app/libs/mocks";
+import { fixedImageStyle } from "@/app/libs/imageStyles";
 import { AnimatedSection } from "..";
 
 export default function Footer() {
@@ -42,6 +43,8 @@ export default function Footer() {
                     width={10}
                     height={15}
                     alt={link.hrefTitle}
+                    className="shrink-0 object-contain"
+                    style={fixedImageStyle(10, 15)}
                   />
                 </Link>
               </AnimatedSection>

@@ -34,6 +34,7 @@ export function AnimatedSection({ rotate, fade, children }: Props) {
   return (
     <div
       ref={ref}
+      className="w-full min-w-0"
       style={rotate ? RotateStyles : fade ? FadeInStyles : DefaultStyles}
     >
       {children}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Clients, Experience, ResumeHeader, Skills } from "../libs/mocks";
 import { AnimatedSection } from "../components";
+import { fixedImageStyle } from "../libs/imageStyles";
 
 export default function About() {
   return (
@@ -89,15 +90,20 @@ export default function About() {
           <p className="md:max-w-[570px] w-full text-[14.5px] leading-[23.36px]">
             {Clients.category}
           </p>
-          <div className="md:max-w-[570px] w-full flex gap-5 justify-between">
+          <div className="md:max-w-[570px] w-full flex flex-wrap items-center gap-x-8 gap-y-6">
             {Clients.clientList.map((client) => {
               return (
-                <div key={client.id} className="flex gap-4">
+                <div key={client.id} className="flex shrink-0 items-center">
                   <Image
                     src={client.clientName}
-                    width={89}
-                    height={32}
-                    alt="clients"
+                    width={client.width ?? 89}
+                    height={client.height ?? 32}
+                    alt={client.alt ?? "Client logo"}
+                    className="shrink-0 object-contain"
+                    style={fixedImageStyle(
+                      client.width ?? 89,
+                      client.height ?? 32
+                    )}
                   />
                 </div>
               );

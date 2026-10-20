@@ -11,9 +11,11 @@ import componentsUi from '@/app/assets/images/components-ui.svg'
 import typographyUi from '@/app/assets/images/typographyelement.svg'
 import typescript from '@/app/assets/icons/typescript.png'
 import graphql from '@/app/assets/icons/graphql.png'
-import next from '@/app/assets/icons/next.png'
 import sibyl from '@/app/assets/icons/sibyl.png'
-import enyata from '@/app/assets/icons/enyata.svg'
+import angular from '@/app/assets/icons/angular.svg'
+import kreditAfricaLogo from '@/app/assets/icons/kreditAfrica.svg'
+import surgeClient from '@/app/assets/icons/surge-client.png'
+import dashqardClient from '@/app/assets/icons/dashqard-client.png'
 import customerInterviews from '@/app/assets/icons/customerInterviews.svg'
 import marketResearch from '@/app/assets/icons/marketResearch.svg'
 import prototypeTesting from '@/app/assets/icons/prototypeTesting.svg'
@@ -29,7 +31,10 @@ import tanstack from '@/app/assets/icons/tanstack.png'
 import zeroWaste from '@/app/assets/images/zeroWaste.gif'
 import voltaVoyage from '@/app/assets/images/voltaVoyage.gif'
 import kreditAfrica from '@/app/assets/images/kreditAfrica.gif'
-import hrms from '@/app/assets/images/hrms.gif'
+import goldbucks from '@/app/assets/images/goldbucks.jpg'
+import surgeAfrica from '@/app/assets/images/surgeAfrica.png'
+import surgeAtlas from '@/app/assets/images/surgeAtlas.png'
+import surgeMobile from '@/app/assets/images/surgeMobile.png'
 import zeroWasteHome from "@/app/assets/images/zeroWasteHome.svg";
 import zeroWaste404 from "@/app/assets/images/zeroWaste404.svg";
 import zeroWasteCalender from "@/app/assets/images/zeroWasteCalendar.svg";
@@ -51,11 +56,11 @@ export const NavigationList: NavigationItem[] = [
     }
 ]
 
-export const SkillsAndTools = [ 
-    {title: "software engineer"},
-    {title: "product designer"},
-    {title: "web developer"}
-]
+export const SkillsAndTools = [
+  { title: "Software Developer" },
+  { title: "UI/UX Designer" },
+  { title: "Mobile Developer" },
+];
 
 export const Links = [
     {href: "/about", icon: link},
@@ -96,7 +101,7 @@ export const Projects: Project[] = [
     },
     {
         id: 3,
-        href: "https://kreditafrica.enyata.com/",
+        href: "https://www.kreditafrica.com/",
         image: kreditAfrica,
         title: "Kredit Africa",
         target: "_blank",
@@ -104,7 +109,7 @@ export const Projects: Project[] = [
           "Kredit Africa's mission is to revolutionize the financial landscape by providing innovative credit-related data and solutions that promote financial inclusion and empower individuals to achieve their financial aspirations.",
         role: "Software Engineer",
         keywords: [
-          { title: "next", icon: next },
+          { title: "react", icon: react },
           { title: "tailwind", icon: tailwind },
           { title: "typescript", icon: typescript },
           { title: "tanstack", icon: tanstack },
@@ -115,24 +120,60 @@ export const Projects: Project[] = [
       },
     {
       id: 4,
-      href: "https://ghana-hrms.enyata.com/",
-      image: hrms,
-      title: "HRMS",
+      href: "https://app.goldbucks.ng/",
+      image: goldbucks,
+      title: "GoldBucks",
       target: "_blank",
       description:
-        "Take your HR management to the next level with HRMS. Streamline your operations, enhance productivity, and drive organizational success.",
+        "GoldBucks is a savings and investment platform for naira and dollar wallets, target and group savings, fixed and locked funds, and investment notes, with tiered account verification.",
       role: "Software Engineer",
       keywords: [
         { title: "react", icon: react },
         { title: "tailwind", icon: tailwind },
-        { title: "graphql", icon: graphql },
-        { title: "jest", icon: jest },
-        { title: "sass", icon: sass },
-        { title: "git", icon: git },
+        { title: "tanstack", icon: tanstack },
       ],
     },
     {
       id: 5,
+      href: "https://surge.africa/",
+      image: surgeAfrica,
+      title: "Surge",
+      target: "_blank",
+      description:
+        "Surge offers salary-backed loans and secure deposits in Ghana, including pension-backed, controller, police, and employer-assisted loans, plus savings deposits and fixed deposits.",
+      role: "Software Engineer",
+      keywords: [
+        { title: "react", icon: react },
+      ],
+    },
+    {
+      id: 6,
+      href: "https://atlas.surge.africa/auth/signup",
+      image: surgeAtlas,
+      title: "Surge Atlas",
+      target: "_blank",
+      description:
+        "Surge Atlas is the loan platform where customers start an application and agents track submissions, commissions, and follow-ups through identity verification.",
+      role: "Software Engineer",
+      keywords: [
+        { title: "angular", icon: angular },
+      ],
+    },
+    {
+      id: 7,
+      href: "https://surge.africa/",
+      image: surgeMobile,
+      title: "Surge Mobile",
+      target: "_blank",
+      description:
+        "The Surge mobile app lets customers apply for a loan, follow recent applications, and complete identity verification with a Ghana Card and a facial scan.",
+      role: "Software Engineer",
+      keywords: [
+        { title: "react native", icon: react },
+      ],
+    },
+    {
+      id: 8,
       href: "https://theseedfi.com/",
       image: seedfi,
       title: "Seedfi",
@@ -157,40 +198,95 @@ export const FooterNavigation = [
 ]
 
 export const ResumeHeader = {
-  title: "Experienced Front End Developer with a year of expertise in HTML, CSS, JavaScript, and TypeScript. Specializing in creating inituitive and high performing web applications. Skilled in UI/UX design, usability testing, and data-driven solutions.",
-  specialization1: "Passionate about leveraging my frontend skills to transform concepts into seamless and visually appealing user interfaces. Whether collaborating with teams, refining ideas, or mentoring fellow developers, I bring a team-first philosophy to every project.",
-  specialization2: "Specializing in bringing ideas to life through prototyping, visual design, and UI systems — along with strategic thinking grounded in a user-centered approach and the endless insights on human behavior and perception from cognitive and behavioral sciences.",
-} 
+  title: "Software developer, UI/UX designer, and mobile developer at Surge, building fintech products that help people access loans, savings, and deposits across Ghana.",
+  specialization1:
+    "I ship across the stack Surge needs: React web experiences, Angular agent platforms, and React Native mobile apps — with a focus on performance, accessibility, and clear flows for verification and onboarding.",
+  specialization2:
+    "On the design side, I translate research and business requirements into interfaces, prototypes, and UI patterns that stay consistent from marketing pages through production apps.",
+};
 
 export const Experience = {
   category: "Experience",
   experience: [
-{
-  id: 1,
-  jobTitle: "Product Designer",
-  industry: "Sibyl Systems - Akosombo - Sept 2023 to present",
-  tasks: [
-    { id: 1, task: "Conducted usability tests with more than 30 users to better understand user behaviors and usability patterns on responsive devices, leading to optimized user experiences."},
-    { id: 2, task: "In less than 4 months, designed elegant flows and interactions for mobile platform partnered with hardware systems, resulting in a 20% increase in user engagement."},
-    { id: 3, task: "Conducted user research, including interviews and usability testing, to inform design decisions, resulting in data-driven design solutions."},
-    { id: 4, task: "Led user-centered design projects resulting in improved satisfaction."},
-    { id: 5, task: "Fostered collaboration and consistency across teams by working closely with product managers, designers and engineers."},
-  ]
-},
-{
-  id: 2,
-  jobTitle: "Software Engineer",
-  industry: "Enyata, Ghana – East Legon - Apr 2022 to present",
-  tasks: [
-    { id: 1, task: "Successfully implemented unit testing infrastructure using Jest and Sonar Cloud, leading to a 10% decrease in software issues."},
-    { id: 2, task: "Optimized images and code, resulting in a 30-second increase in Time on Page, improving web performance and scalability."},
-    { id: 3, task: "Developed a fully responsive model ensuring compatibility with a wide range of device viewports, resulting in improved user experience."},
-    { id: 4, task: "Building reusable code for future use."},
-    { id: 5, task: "Utilizing a variety of markup languages to write web pages."},
-  ]
-}
-  ]
-}
+    {
+      id: 1,
+      jobTitle: "Software Developer · UI/UX Designer · Mobile Developer",
+      industry: "Surge, Ghana – present",
+      tasks: [
+        {
+          id: 1,
+          task: "Build and maintain Surge’s public web experience, internal Angular loan platform (Surge Atlas), and React Native customer app — from application flows to Ghana Card and facial verification.",
+        },
+        {
+          id: 2,
+          task: "Design and refine UI/UX for loan onboarding, agent workflows, and mobile journeys in close collaboration with product and engineering.",
+        },
+        {
+          id: 3,
+          task: "Implement responsive, accessible interfaces with React, Angular, and React Native, using shared patterns for forms, status, and error handling.",
+        },
+        {
+          id: 4,
+          task: "Prototype flows and visual systems to align marketing, product, and engineering before features ship.",
+        },
+      ],
+    },
+    {
+      id: 2,
+      jobTitle: "Product Designer",
+      industry: "Sibyl Systems, Akosombo – Sept 2023 to 2024",
+      tasks: [
+        {
+          id: 1,
+          task: "Conducted usability tests with more than 30 users to better understand user behaviors and usability patterns on responsive devices, leading to optimized user experiences.",
+        },
+        {
+          id: 2,
+          task: "In less than 4 months, designed elegant flows and interactions for a mobile platform partnered with hardware systems, resulting in a 20% increase in user engagement.",
+        },
+        {
+          id: 3,
+          task: "Conducted user research, including interviews and usability testing, to inform design decisions, resulting in data-driven design solutions.",
+        },
+        {
+          id: 4,
+          task: "Led user-centered design projects resulting in improved satisfaction.",
+        },
+        {
+          id: 5,
+          task: "Fostered collaboration and consistency across teams by working closely with product managers, designers, and engineers.",
+        },
+      ],
+    },
+    {
+      id: 3,
+      jobTitle: "Software Engineer",
+      industry: "Enyata, Ghana – East Legon – Apr 2022 to 2024",
+      tasks: [
+        {
+          id: 1,
+          task: "Successfully implemented unit testing infrastructure using Jest and Sonar Cloud, leading to a 10% decrease in software issues.",
+        },
+        {
+          id: 2,
+          task: "Optimized images and code, resulting in a 30-second increase in Time on Page, improving web performance and scalability.",
+        },
+        {
+          id: 3,
+          task: "Developed a fully responsive model ensuring compatibility with a wide range of device viewports, resulting in improved user experience.",
+        },
+        {
+          id: 4,
+          task: "Built reusable components and patterns for React applications across client projects.",
+        },
+        {
+          id: 5,
+          task: "Collaborated with designers and backend teams to ship production features for fintech and HR products.",
+        },
+      ],
+    },
+  ],
+};
 
 export const Skills = {
   category: "Skills",
@@ -198,19 +294,18 @@ export const Skills = {
     {
       id: 3,
       under: "Web Development",
-      description: `Passionate about web development, I thrive on crafting digital experiences that seamlessly blend creativity with functionality. 
-      From designing interactive and user-friendly interfaces to optimizing performance and ensuring responsiveness across devices, 
-      I am dedicated to delivering robust and engaging web solutions. My detail-oriented approach ensures that every line of code contributes 
-      to the overall efficiency and success of the projects I undertake.`
+      description: `I build production web apps with React and Angular — marketing sites, dashboards, and multi-step flows — with an emphasis on performance, responsive layout, and maintainable component structure.`,
     },
-{
-  id: 1,
-  under: "Product Design",
-  description: `I like how product design empowers us to leverage user insights to craft products that effectively address real-
-  world challenges, while delivering value to users. I work closely with cross-functional teams, including engineers 
-  and business strategists, to identify user needs, create design concepts, and refine product designs through 
-  testing and iteration.`
-},
+    {
+      id: 4,
+      under: "Mobile Development",
+      description: `I develop React Native apps for iOS and Android, including identity verification, application tracking, and offline-friendly UX, keeping parity with web where it matters for users.`,
+    },
+    {
+      id: 1,
+      under: "UI/UX Design",
+      description: `I turn user research and product goals into wireframes, prototypes, and polished UI — especially for fintech flows where clarity, trust, and error recovery matter.`,
+    },
 {
   id: 2,
   under: "Design Systems",
@@ -220,23 +315,43 @@ export const Skills = {
 },
   ],
   group: [
-    {id: 1, keyword: "Landing Pages"},
-    {id: 2, keyword: "Apps"},
-    {id: 3, keyword: "Prototyping"},
-    {id: 4, keyword: "Websites"},
-    {id: 5, keyword: "Design Guidelines"},
-    {id: 6, keyword: "Illustration"},
-  ]
+    { id: 1, keyword: "React & Angular" },
+    { id: 2, keyword: "React Native" },
+    { id: 3, keyword: "UI/UX & Prototyping" },
+    { id: 4, keyword: "Design Systems" },
+    { id: 5, keyword: "Fintech Flows" },
+    { id: 6, keyword: "Usability Testing" },
+  ],
 }
 
 export const Clients = {
   category: "Clients worked with",
   clientList: [
-    {id: 1, clientName: sibyl},
-    {id: 2, clientName: enyata},
-    {id: 3, clientName: fredoEngineering},
-  ]
-}
+    { id: 1, clientName: surgeClient, alt: "Surge", width: 120, height: 40 },
+    {
+      id: 2,
+      clientName: kreditAfricaLogo,
+      alt: "Kredit Africa",
+      width: 120,
+      height: 40,
+    },
+    {
+      id: 3,
+      clientName: dashqardClient,
+      alt: "Dashqard",
+      width: 120,
+      height: 36,
+    },
+    { id: 4, clientName: sibyl, alt: "Sibyl Systems", width: 89, height: 32 },
+    {
+      id: 5,
+      clientName: fredoEngineering,
+      alt: "Fredo Engineering",
+      width: 89,
+      height: 32,
+    },
+  ],
+};
 
 export const AboutPageDetails = [
   {

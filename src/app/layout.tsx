@@ -7,22 +7,58 @@ import GoogleAnalytics from "./components/googleAnalytics/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// export const metadata: Metadata = {
-//   title: `Abeeku's Porfolio`,
-//   description: "Product designer + software engineer portfolio",
-//   metadataBase: new URL("https://abeeku-portfolio.vercel.app/"),
-//   keywords: ["product designer, software engineer, portfolio"],
-//   openGraph: {
-//     images:
-//       "https://asset.cloudinary.com/dgos0voss/bc76d3cd22650bcf2b9725a408536b9c",
-//     type: "website",
-//     url: "https://abeeku-portfolio.vercel.app/",
-//     siteName: "Abeeku's Portfolio",
-//     locale: "en_US",
-//     title: "Abeeku's Portfolio",
-//     description: "Product designer + software engineer portfolio",
-//   },
-// };
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  "https://abeeku-portfolio.vercel.app";
+
+const siteTitle = "Abeeku Djokoto — Software Engineer + Product Designer";
+const siteDescription =
+  "I design and build digital products with a strong focus on usability, performance, and clean visual systems.";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteTitle,
+    template: "%s | Abeeku Djokoto",
+  },
+  description: siteDescription,
+  keywords: [
+    "Abeeku Djokoto",
+    "software engineer",
+    "product designer",
+    "portfolio",
+    "frontend",
+    "React",
+  ],
+  authors: [{ name: "Abeeku Djokoto", url: siteUrl }],
+  creator: "Abeeku Djokoto",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    siteName: "Abeeku Djokoto",
+    title: siteTitle,
+    description: siteDescription,
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Abeeku Djokoto — portfolio preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    creator: "@lar_riri",
+    images: ["/twitter-image.png"],
+  },
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -30,64 +66,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="html">
-      <head>
-        <link
-          rel="icon"
-          href="https://abeeku-portfolio.vercel.app/"
-          type="image/x-icon"
-        />
-
-        <meta
-          name="description"
-          content="Product designer + software engineer portfolio"
-        />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta
-          property="og:url"
-          content="https://abeeku-portfolio.vercel.app/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="View Abeeku's Portfolio" />
-        <meta
-          property="og:description"
-          content="Product designer + software engineer portfolio"
-        />
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/dgos0voss/image/upload/v1727957751/metaImage_nmanzt.png"
-        />
-        <meta
-          name="keywords"
-          content="product designer, software engineer, portfolio"
-        />
-
-        {/* <!-- Twitter Meta Tags --> */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@lar_riri" />
-        <meta property="twitter:domain" content="abeeku-portfolio.vercel.app" />
-        <meta
-          property="twitter:url"
-          content="https://abeeku-portfolio.vercel.app/"
-        />
-        <meta name="twitter:title" content="View Abeeku's Portfolio" />
-        <meta
-          name="twitter:description"
-          content="Product designer + software engineer portfolio"
-        />
-        <meta
-          name="twitter:image"
-          content="https://res.cloudinary.com/dgos0voss/image/upload/v1727957751/metaImage_nmanzt.png"
-        />
-        <meta
-          name="twitter:keywords"
-          content="product designer, software engineer, portfolio"
-        />
-
-        {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
-      </head>
-      <body className={inter.className}>
+    <html lang="en" className="html dark" suppressHydrationWarning>
+      <body
+        className={`${inter.className} min-h-screen bg-background text-foreground antialiased`}
+        suppressHydrationWarning
+      >
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
           <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
         ) : null}

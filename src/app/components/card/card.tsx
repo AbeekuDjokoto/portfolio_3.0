@@ -1,5 +1,6 @@
 import profile from "@/app/assets/images/abeekudjokoto.png";
 import { cn } from "@/app/libs/classNames";
+import { fixedImageStyle } from "@/app/libs/imageStyles";
 import arrow from "@/app/assets/icons/arrow.svg";
 import download from "@/app/assets/icons/document-download.svg";
 import { Links, SkillsAndTools } from "@/app/libs/mocks";
@@ -36,7 +37,14 @@ export default function Card() {
                   "max-w-[282px] w-full flex gap-2 bg-[var(--black)] text-white font-normal"
                 )}
               >
-                <Image src={arrow} alt="arrow" width={24} height={24} />
+                <Image
+                  src={arrow}
+                  alt="arrow"
+                  width={24}
+                  height={24}
+                  className="shrink-0 object-contain"
+                  style={fixedImageStyle(24)}
+                />
                 Get In Touch
               </BaseButton>
             </Link>
@@ -56,6 +64,8 @@ export default function Card() {
                 alt="pointer arrow"
                 width={24}
                 height={24}
+                className="shrink-0 object-contain"
+                style={fixedImageStyle(24)}
               />
             </Link>
           </div>
@@ -72,7 +82,7 @@ export default function Card() {
                   key={index}
                   className="bg-white border border-[#E5E7EB] h-[48px] rounded-[20px] py-2 px-3"
                 >
-                  <p className="text-[var(--black)] text-sm font-normal leading-[18.66px] tracking-[0.15px] capitalize">
+                  <p className="text-[var(--black)] text-sm font-normal leading-[18.66px] tracking-[0.15px]">
                     {skills.title}
                   </p>
                 </BaseButton>
@@ -93,7 +103,8 @@ export default function Card() {
                     width={24}
                     height={24}
                     alt="navigateion routes"
-                    className="text-[var(--black)] text-sm font-normal leading-[18.66px] tracking-[0.15px] capitalize"
+                    className="shrink-0 object-contain"
+                    style={fixedImageStyle(24)}
                   />
                 </Link>
               );
