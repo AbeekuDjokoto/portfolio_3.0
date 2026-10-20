@@ -583,7 +583,7 @@
   }
 
   .project-window {
-    @apply flex w-full min-w-0 flex-col overflow-hidden rounded-2xl border border-[#212833] bg-[#0f131a]/70 transition-all duration-300;
+    @apply flex w-full min-w-0 flex-col overflow-visible rounded-2xl border border-[#212833] bg-[#0f131a]/70 transition-all duration-300;
 
     &:hover {
       @apply -translate-y-1 border-[#2f3b4a] bg-[#121821];

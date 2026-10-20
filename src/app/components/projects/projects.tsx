@@ -20,16 +20,20 @@ export default function ProjectList() {
                 <div className="host">{project.title}</div>
               </div>
             </div>
-            <div className="project-window-body">
-              <Link href={project.href} target={project.target || undefined}>
+            <div className="project-window-body min-w-0">
+              <Link
+                href={project.href}
+                target={project.target || undefined}
+                className="block min-w-0 overflow-hidden rounded-xl border border-[#212833]"
+              >
                 <Image
                   src={project.image}
                   alt={project.title}
-                  className="rounded-xl border border-[#212833] object-cover transition-transform duration-300 group-hover:scale-[1.01]"
+                  className="h-auto w-full max-w-full object-cover transition-transform duration-300 group-hover:scale-[1.01]"
                 />
               </Link>
-              <div className="flex justify-between">
-                <div className="w-full flex flex-col gap-4">
+              <div className="min-w-0 w-full">
+                <div className="flex w-full min-w-0 flex-col gap-4">
                   <div className="flex flex-col gap-2">
                     <div className="flex justify-between gap-3 text-sm font-normal leading-5">
                       <h3 className="min-w-0 text-lg font-semibold leading-7 md:text-xl">
@@ -45,11 +49,11 @@ export default function ProjectList() {
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex w-full min-w-0 flex-wrap gap-2">
                     {project.keywords.map((keyword, index) => (
                       <div
                         key={index}
-                        className="bg-white border border-[#E5E7EB] rounded-full py-[10px] px-3 flex gap-1 items-center"
+                        className="inline-flex max-w-full shrink-0 items-center gap-1 rounded-full border border-[#E5E7EB] bg-white px-3 py-[10px]"
                       >
                         {keyword.icon ? (
                           <Image
@@ -62,7 +66,7 @@ export default function ProjectList() {
                           />
                         ) : null}
 
-                        <p className="text-[var(--black)] text-sm font-normal leading-[19.88px] tracking-[0.15px] capitalize">
+                        <p className="whitespace-nowrap text-[var(--black)] text-sm font-normal leading-[19.88px] tracking-[0.15px] capitalize">
                           {keyword.title}
                         </p>
                       </div>
